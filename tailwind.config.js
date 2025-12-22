@@ -25,15 +25,14 @@ module.exports = {
       'small-hw-screen': {'raw': '(min-height: 700px) and (min-width: 1280px)'},
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
       colors: {
         main: {
-          'purpure-grey': '#72779A',
-          'purpure-dark': '#1A1B28',
-          red: "#FA3B1E",
-          "blue-grey": "#3F4456",
-          purple: '#746AFF',
-          grey: '#F5F6FD',
-          "dark-gray": '#9FA3BD'
+          blue: '#002160',
+          yellow: '#FFE492',
+
         },
       },
     },

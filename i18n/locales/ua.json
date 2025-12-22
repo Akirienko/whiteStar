@@ -1,4 +1,13 @@
 {
+  "header": {
+    "home": "Головна",
+    "location": "Локація",
+    "sitePlan": "План ділянки",
+    "specifications": "Специфікації",
+    "whyWSRE": "Чому WSRE",
+    "forTenants": "Для орендарів",
+    "becomeTenant": "Стати орендарем"
+  },
   "hero": {
     "title": "Ласкаво просимо до White Star",
     "subtitle": "Ваш надійний партнер",

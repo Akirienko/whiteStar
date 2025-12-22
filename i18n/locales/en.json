@@ -1,4 +1,13 @@
 {
+  "header": {
+    "home": "Home",
+    "location": "Location",
+    "sitePlan": "Site Plan",
+    "specifications": "Specifications",
+    "whyWSRE": "Why WSRE",
+    "forTenants": "For Tenants",
+    "becomeTenant": "Become a Tenant"
+  },
   "hero": {
     "title": "Welcome to White Star",
     "subtitle": "Your trusted partner",
