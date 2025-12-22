@@ -1,0 +1,20 @@
+{
+  "hero": {
+    "title": "Welcome to White Star",
+    "subtitle": "Your trusted partner",
+    "button": "Learn More"
+  },
+  "about": {
+    "title": "About Us",
+    "description": "Company description"
+  },
+  "services": {
+    "title": "Our Services",
+    "description": "Services description"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "email": "Email",
+    "phone": "Phone"
+  }
+}
