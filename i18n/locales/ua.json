@@ -8,22 +8,34 @@
     "forTenants": "Для орендарів",
     "becomeTenant": "Стати орендарем"
   },
-  "hero": {
-    "title": "Ласкаво просимо до White Star",
-    "subtitle": "Ваш надійний партнер",
-    "button": "Дізнатися більше"
+  "main": {
+    "title": "WHITE STAR",
+    "subtitle": "Індустріально-логістичний парк Буча",
+    "subtitletwo": "Складський комплекс світового рівня, що підтримує стійкість та розвиток бізнесу України."
   },
-  "about": {
-    "title": "Про нас",
-    "description": "Опис компанії"
+  "benefits": {
+    "title": "Ключові переваги",
+    "block1": "240 000 м² простору класу А",
+    "block2": "41 га забудови",
+    "block3": "8 км від Києва",
+    "block4": "Прямий доступ до Е373 та основних маршрутів ЄС",
+    "block5": "Сертифікація LEED",
+    "block6": "10 сучасних будівель"
   },
+  "btn-become": "Стати орендарем",
+  "btn-download": "Завантажити брошуру",
   "services": {
     "title": "Наші послуги",
     "description": "Опис послуг"
   },
-  "contact": {
-    "title": "Зв'язатися з нами",
-    "email": "Електронна пошта",
-    "phone": "Телефон"
+  "location": {
+    "title": "Location",
+    "subtitle": "Strategically located in Bucha, Ukraine",
+    "description": "Only 8 km from Kyiv, 1 km to E373 Warsaw–Kyiv corridor. The site provides unmatched connectivity to Kyiv, Lviv, Warsaw, Odesa, and key logistics hubs.",
+    "key1": "1 km to E373 motorway",
+    "key2": "7 km to Hostomel Airportr",
+    "key3": "Kyiv Grand Ring Road (under construction)",
+    "key4": "Direct routes to Poland and the EU",
+    "button": "See Location Map"
   }
 }

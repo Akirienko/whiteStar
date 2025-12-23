@@ -32,6 +32,8 @@
 
 * {
   font-family: 'Inter', sans-serif;
+  color: #fff;
+  font-weight: 400;
 }
 
 section {
@@ -43,7 +45,7 @@ section {
 .main-container {
   padding: 0 16px;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1370px;
 }
 
 img {

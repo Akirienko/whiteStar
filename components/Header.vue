@@ -5,10 +5,10 @@ const isMenuOpen = ref(false)
 const menuItems = [
   { key: 'home', href: '#home' },
   { key: 'location', href: '#location' },
-  { key: 'sitePlan', href: '#site-plan' },
+  { key: 'sitePlan', href: '#sitePlan' },
   { key: 'specifications', href: '#specifications' },
-  { key: 'whyWSRE', href: '#why-wsre' },
-  { key: 'forTenants', href: '#for-tenants' },
+  { key: 'whyWSRE', href: '#whyWsre' },
+  { key: 'forTenants', href: '#forTenants' },
 ]
 
 const toggleMenu = () => {
@@ -22,15 +22,40 @@ const switchLocale = () => {
 const closeMenu = () => {
   isMenuOpen.value = false
 }
+
+// Блокувати скрол коли меню відкрите
+watch(isMenuOpen, (newValue) => {
+  if (newValue) {
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.body.style.overflow = ''
+  }
+})
+
+// Закривати меню при натисканні ESC
+onMounted(() => {
+  const handleEscape = (e) => {
+    if (e.key === 'Escape' && isMenuOpen.value) {
+      closeMenu()
+    }
+  }
+  window.addEventListener('keydown', handleEscape)
+
+  // Cleanup
+  onUnmounted(() => {
+    window.removeEventListener('keydown', handleEscape)
+    document.body.style.overflow = ''
+  })
+})
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 bg-main-blue text-white">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-main-blue/80 backdrop-blur-md text-white">
     <div class="main-container">
       <div class="flex items-center justify-between h-20">
 
         <a href="#home" class="flex items-center">
-          <img src="../assets/image/logo.webp" class="w-[150px]" alt="">
+          <img src="/image/logo.webp" class="w-[150px]" alt="">
         </a>
 
         <!-- Desktop Navigation -->
@@ -39,7 +64,7 @@ const closeMenu = () => {
             v-for="item in menuItems"
             :key="item.key"
             :href="item.href"
-            class="text-sm hover:text-main-yellow transition-colors"
+            class="text-sm hover:text-main-yellow transition-colors lg:text-lg"
           >
             {{ $t(`header.${item.key}`) }}
           </a>
@@ -51,14 +76,14 @@ const closeMenu = () => {
             @click="switchLocale"
             class="text-sm font-medium hover:text-main-yellow transition-colors"
           >
-            {{ locale === 'en' ? 'ENG' : 'УКР' }}
+            {{ locale === 'en' ? 'UA' : 'ENG' }}
           </button>
           <a
             href="#become-tenant"
             class="bg-main-yellow text-[#0B1E3F] px-6 py-3 rounded-lg font-medium hover:bg-[#E5B732] transition-colors flex items-center gap-2"
           >
             {{ $t('header.becomeTenant') }}
-            <span>→</span>
+            <span class="text-[#0B1E3F]">→</span>
           </a>
         </div>
 
@@ -68,7 +93,7 @@ const closeMenu = () => {
             @click="switchLocale"
             class="text-sm font-medium hover:text-main-yellow transition-colors"
           >
-            {{ locale === 'en' ? 'ENG' : 'УКР' }}
+            {{ locale === 'en' ? 'UA' : 'ENG' }}
           </button>
           <button
             @click="toggleMenu"
@@ -93,44 +118,54 @@ const closeMenu = () => {
     </div>
 
     <!-- Mobile Menu -->
-    <Transition
-      enter-active-class="transition-all duration-300"
-      enter-from-class="opacity-0 translate-x-full"
-      enter-to-class="opacity-100 translate-x-0"
-      leave-active-class="transition-all duration-300"
-      leave-from-class="opacity-100 translate-x-0"
-      leave-to-class="opacity-0 translate-x-full"
-    >
-      <div
-        v-if="isMenuOpen"
-        class="lg:hidden fixed inset-0 top-20 bg-main-blue flex flex-col"
+    <Teleport to="body">
+      <Transition
+        enter-active-class="transition-opacity duration-300"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition-opacity duration-300"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
       >
-        <nav class="flex-1 flex flex-col items-center justify-center gap-6 px-6">
-          <a
-            v-for="item in menuItems"
-            :key="item.key"
-            :href="item.href"
-            @click="closeMenu"
-            class="text-2xl font-medium hover:text-main-yellow transition-colors"
-          >
-            {{ $t(`header.${item.key}`) }}
-          </a>
-        </nav>
-        <div class="p-6 pb-8">
-          <a
-            href="#become-tenant"
-            @click="closeMenu"
-            class="block w-full bg-main-yellow text-[#0B1E3F] text-center px-6 py-4 rounded-lg font-medium text-lg hover:bg-[#E5B732] transition-colors"
-          >
-            {{ $t('header.becomeTenant') }}
-            <span class="ml-2">→</span>
-          </a>
+        <div
+          v-if="isMenuOpen"
+          class="lg:hidden fixed inset-0 z-40 bg-main-blue"
+          @click.self="closeMenu"
+        >
+          <!-- Menu Content -->
+          <div class="h-full flex flex-col pt-20">
+            <nav class="flex-1 flex flex-col items-center justify-center gap-8 px-6">
+              <a
+                v-for="item in menuItems"
+                :key="item.key"
+                :href="item.href"
+                @click="closeMenu"
+                class="text-2xl font-medium hover:text-main-yellow transition-colors"
+              >
+                {{ $t(`header.${item.key}`) }}
+              </a>
+            </nav>
+
+            <!-- Bottom Button -->
+            <div class="p-6 pb-10 safe-area-bottom">
+              <a
+                href="#become-tenant"
+                @click="closeMenu"
+                class="block w-full bg-main-yellow text-main-blue text-center px-6 py-4 rounded-lg font-semibold text-lg hover:bg-[#E5B732] transition-colors"
+              >
+                {{ $t('header.becomeTenant') }}
+                <span class="ml-2">→</span>
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </Transition>
+      </Transition>
+    </Teleport>
   </header>
 </template>
 
 <style scoped>
-/* Prevent body scroll when menu is open */
+.safe-area-bottom {
+  padding-bottom: max(2.5rem, env(safe-area-inset-bottom));
+}
 </style>

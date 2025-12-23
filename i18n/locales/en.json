@@ -8,18 +8,33 @@
     "forTenants": "For Tenants",
     "becomeTenant": "Become a Tenant"
   },
-  "hero": {
-    "title": "Welcome to White Star",
-    "subtitle": "Your trusted partner",
-    "button": "Learn More"
+  "main": {
+    "title": "WHITE STAR",
+    "subtitle": "Bucha Industrial & Logistic Park",
+    "subtitletwo": "A world-class warehouse hub supporting Ukraine’s resilience and business growth."
   },
-  "about": {
-    "title": "About Us",
-    "description": "Company description"
+  "benefits": {
+    "title": "Key Benefits",
+    "block1": "240,000 m² Class A Space",
+    "block2": "41 ha Development",
+    "block3": "8 km from Kyiv",
+    "block4": "Direct access to E373 & major EU routes",
+    "block5": "Targeting LEED Certification",
+    "block6": "10 modern buildings"
   },
-  "services": {
-    "title": "Our Services",
-    "description": "Services description"
+  "btn-become": "Become a Tenant",
+  "btn-download": "Download Brochure",
+
+  "location": {
+    "title": "Location",
+    "subtitle": "Strategically located in Bucha, Ukraine",
+    "description": "Only 8 km from Kyiv, 1 km to E373 Warsaw–Kyiv corridor. The site provides unmatched connectivity to Kyiv, Lviv, Warsaw, Odesa, and key logistics hubs.",
+    "key1": "1 km to E373 motorway",
+    "key2": "7 km to Hostomel Airportr",
+    "key3": "Kyiv Grand Ring Road (under construction)",
+    "key4": "Direct routes to Poland and the EU",
+    "button": "See Location Map"
+
   },
   "contact": {
     "title": "Contact Us",

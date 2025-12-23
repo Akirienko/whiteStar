@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-black">
-    
-  </div>
+  <MainSection />
+  <BenefitsSection />
+  <LocationSection />
 </template>
 
 <script setup>
