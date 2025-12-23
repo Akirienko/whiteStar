@@ -1,13 +1,21 @@
 <template>
-  <MainSection />
-  <BenefitsSection />
-  <LocationSection />
+  <Hero />
+  <Benefits />
+  <Location />
+  <div class="bg-main-blue">
+    <Specifications />
+    <Adaptations />
+    <Warehouse />
+  </div>
+  <Tenants />
+  <WSRE />
 </template>
 
 <script setup>
 
+
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

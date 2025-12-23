@@ -29,13 +29,72 @@
     "description": "Опис послуг"
   },
   "location": {
-    "title": "Location",
-    "subtitle": "Strategically located in Bucha, Ukraine",
-    "description": "Only 8 km from Kyiv, 1 km to E373 Warsaw–Kyiv corridor. The site provides unmatched connectivity to Kyiv, Lviv, Warsaw, Odesa, and key logistics hubs.",
-    "key1": "1 km to E373 motorway",
-    "key2": "7 km to Hostomel Airportr",
-    "key3": "Kyiv Grand Ring Road (under construction)",
-    "key4": "Direct routes to Poland and the EU",
-    "button": "See Location Map"
+    "title": "Локація",
+    "subtitle": "Стратегічно розташована у Бучі, Україна",
+    "description": "Всього 8 км від Києва, 1 км до коридору Варшава-Київ E373. Локація забезпечує безпрецедентну доступність до Києва, Львова, Варшави, Одеси та ключових логістичних центрів.",
+    "key1": "1 км до автомагістралі E373",
+    "key2": "7 км до аеропорту Гостомель",
+    "key3": "Київське кільцеве шосе (в будівництві)",
+    "key4": "Прямі маршрути до Польщі та ЄС",
+    "button": "Переглянути карту локації"
+  },
+  "specifications": {
+    "title": "Технічні характеристики",
+    "blockTitle1": "Протипожежний захист:",
+    "blockText1": "ESFR",
+    "blockTitle2": "Чиста висота:",
+    "blockText2": "12 м",
+    "blockTitle3": "Навантаження на підлогу:",
+    "blockText3": "6 Т/м²",
+    "blockTitle4": "Сертифікація:",
+    "blockText4": "LEED",
+    "blockTitle5": "Доступне:",
+    "blockText5": "Навантажувальні доки + під'їзди",
+    "blockTitle6": "Сітка колон:",
+    "blockText6": "22,5 м х 12 м",
+    "blockTitle7": "Клас:",
+    "blockText7": "A/B"
+  },
+  "warehouse": {
+    "title": "Типи складів",
+    "type1": "Тип 1",
+    "type1Num": "1 : 20 950 м²",
+    "type1Desk": "Оптимально для 3PL,",
+    "type1Desk2": "e-commerce, FMCG та роздрібної дистрибуції",
+    "type2": "Тип 2",
+    "type2Num": "2 : 15 720 м²",
+    "type2Desk": "Ідеально для логістики,",
+    "type2Desk2": "легкого виробництва та середніх орендарів",
+    "button": "Завантажити плани поверхів"
+  },
+  "adaptations": {
+    "title": "Доступні технічні адаптації",
+    "list1": "Опції Build-to-Own",
+    "list2": "Посилення надбудови (дах)",
+    "list3": "Рішення Build-to-Suit",
+    "list4": "Індивідуальні системи протипожежного захисту",
+    "list5": "Покращені екологічні рішення",
+    "list6": "Гнучка сітка та висота",
+    "button": "Запросити технічну специфікацію"
+  },
+  "tenants": {
+    "title": "Підходить для/Ідеальні орендарі",
+    "itemList1": "3PL та логістика",
+    "itemList2": "Дистрибуція FMCG",
+    "itemList3": "Рітейл та омніканал",
+    "itemList4": "E-commerce",
+    "itemList5": "Автомобільна галузь та запчастини",
+    "itemList6": "Легка промисловість",
+    "itemList7": "Будівельні матеріали, Home & DIY",
+    "button": "Дивитися галузі, які ми обслуговуємо"
+  },
+  "wsre": {
+    "title": "WSRE у цифрах",
+    "subtitle": "White Star Real Estate (WSRE) — один із провідних девелоперів Центральної Європи з понад 30-річним досвідом, 65 реалізованими проєктами та 2,7 млн м² під управлінням.",
+    "itemList1": "500+ співробітників у 6 країнах",
+    "itemList2": "Повністю інтегрована платформа девелопменту, будівництва та управління активами",
+    "itemList3": "70+ завершених проєктів",
+    "itemList4": "Досвід реалізації у країнах, що розвиваються",
+    "button": "Детальніше про WSRE"
   }
 }

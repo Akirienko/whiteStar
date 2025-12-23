@@ -29,7 +29,13 @@ const cases = computed(() => [
           :key="idx"
           class="bg-main-blue text-white p-6 rounded-[10px] mb-6 flex items-center justify-center xl:h-60"
         >
-          <p class="font-bold text-main-yellow text-center xl:text-4xl max-w-[260px]">{{ item }}</p>
+          <p
+            class="font-bold text-main-yellow text-center xl:text-[34px] max-w-[260px]"
+            :class="{
+              'max-w-[380px]': idx === 3,
+              '!max-w-[165px]': idx === 2
+            }"
+            >{{ item }}</p>
         </div>
       </div>
       <div class="flex flex-col items-center mt-7 xl:mt-16">

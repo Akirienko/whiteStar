@@ -64,7 +64,7 @@ onMounted(() => {
             v-for="item in menuItems"
             :key="item.key"
             :href="item.href"
-            class="text-sm hover:text-main-yellow transition-colors lg:text-lg"
+            class="text-sm hover:text-main-yellow transition-colors xl:text-lg"
           >
             {{ $t(`header.${item.key}`) }}
           </a>

@@ -36,9 +36,63 @@
     "button": "See Location Map"
 
   },
-  "contact": {
-    "title": "Contact Us",
-    "email": "Email",
-    "phone": "Phone"
+  "specifications": {
+    "title": "Technical Specifications",
+    "blockTitle1": "Fire protection:",
+    "blockText1": "ESFR",
+    "blockTitle2": "Clear height:",
+    "blockText2": "12 m",
+    "blockTitle3": "Floor loading:",
+    "blockText3": "6 T/м²",
+    "blockTitle4": "Certification:",
+    "blockText4": "LEED",
+    "blockTitle5": "Available",
+    "blockText5": "Loading docks +drive-ins",
+    "blockTitle6": "Column grid:",
+    "blockText6": "22.5m  x 12 m",
+    "blockTitle7": "Class:",
+    "blockText7": "A/B"
+  },
+  "adaptations": {
+    "title": "Available Technical Adaptations",
+    "list1": "Build-to-Own options",
+    "list2": "Superstructure strengthening (roof)",
+    "list3": "Build-to-Suit solutions",
+    "list4": "Custom fire protection systems",
+    "list5": "Enhanced environmental solutions",
+    "list6": "Flexible grid and height configurations",
+    "button": "Request Technical Specification Sheet"
+  },
+  "warehouse": {
+    "title": "Warehouse Types",
+    "type1": "Type 1",
+    "type1Num": " 1 : 20 950 м² ",
+    "type1Desk": "Optimized for 3PL,",
+    "type1Desk2": "e-commerce, FMCG, and retail distribution",
+    "type2": "Type 2",
+    "type2Num": " 2 : 15 720 м² ",
+    "type2Desk": "Ideal for logistics,",
+    "type2Desk2": "light manufacturing, and mid-size occupiers",
+    "button": "Download Floor Plans"
+  },
+  "tenants": {
+    "title": "Suitable For/ Ideal Tenants",
+    "itemList1": "3PL & Logistics",
+    "itemList2": "FMCG Distribution",
+    "itemList3": "Retail & Omni-channel",
+    "itemList4": "E-commerce",
+    "itemList5": "Automotive & Parts",
+    "itemList6": "Light Manufacturing",
+    "itemList7": "Home & DIY; Construction / building materials",
+    "button": "See Industries We Serve"
+  },
+  "wsre": {
+    "title": "WSRE in Numbers",
+    "subtitle": "White Star Real Estate (WSRE) is one of Central Europe’s leading developers with 30+ years of experience, 65 projects delivered, and 2.7 million m² under management",
+    "itemList1": "500+ employees in 6 countries",
+    "itemList2": "Fully integrated development, construction, and asset management platform",
+    "itemList3": "70+ completed developments",
+    "itemList4": "Proven execution in emerging markets",
+    "button": "More About WSRE"
   }
 }

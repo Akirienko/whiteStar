@@ -22,7 +22,7 @@ const list = computed(() => [
       <p class="text-[#3D3E40] lg:text-2xl mb-14 max-w-[750px]">{{ t('location.description') }}</p>
       <List
         :list="list"
-        class="mt-6 mb-10 lg:flex lg:flex-wrap lg:justify-between"
+        class="mt-6 mb-10 space-y-4 xl:space-y-0 xl:gap-6 xl:flex xl:flex-wrap xl:justify-between"
         textClass="text-[#3D3E40]"
       />
 
