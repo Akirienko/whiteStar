@@ -94,5 +94,27 @@
     "itemList3": "70+ completed developments",
     "itemList4": "Proven execution in emerging markets",
     "button": "More About WSRE"
+  },
+  "offers": {
+    "title": "Our Offers",
+    "itemList1": "High Quality Standarts",
+    "itemList2": "Fast Delivery Timelines",
+    "itemList3": "Proven Reliability & Execution ",
+    "itemList4": "Full Transparency",
+    "itemList5": "Long-Term Owner Commitment & Guarantee"
+  },
+  "Bucha": "Bucha",
+  "contacts": {
+    "title": "Contacts",
+    "subTitle": "They will contact you and answer all your questions:",
+    "managerName": "Yaryna Zozulia",
+    "managerPos": "Country Leasing&Sales manager",
+    "partnerName": "Pawel Marciniak",
+    "partnerPos": "Associate Partner",
+    "formName": "Name",
+    "formPhone": "Phone number",
+    "formEmail": "Email",
+    "formButton": "Send Request"
   }
+
 }

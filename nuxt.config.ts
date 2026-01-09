@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-12-22',
   devtools: { enabled: false },
+  ssr: true, // SSR/SSG mode
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   css: ['~/assets/style/main.css'],
   i18n: {

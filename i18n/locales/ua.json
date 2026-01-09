@@ -96,5 +96,26 @@
     "itemList3": "70+ завершених проєктів",
     "itemList4": "Досвід реалізації у країнах, що розвиваються",
     "button": "Детальніше про WSRE"
+  },
+  "offers": {
+    "title": "Our Offers",
+    "itemList1": "High Quality Standarts",
+    "itemList2": "Fast Delivery Timelines",
+    "itemList3": "Proven Reliability & Execution ",
+    "itemList4": "Full Transparency",
+    "itemList5": "Long-Term Owner Commitment & Guarantee"
+  },
+  "Bucha": "Буча",
+  "contacts": {
+    "title": "Контакти",
+    "subTitle": "Вони зв'яжуться з вами та відповідуть на усі ваші запитання:",
+    "managerName": "Ярина Зозуля",
+    "managerPos": "Менеджер з продажу та лізингу",
+    "partnerName": "Павел Марцінюк",
+    "partnerPos": "Асоційований партнер",
+    "formName": "Ім'я",
+    "formPhone": "Номер телефону",
+    "formEmail": "Email",
+    "formButton": "Відправити запит"
   }
 }

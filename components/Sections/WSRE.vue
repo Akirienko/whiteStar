@@ -58,11 +58,11 @@
               <div
                 v-if="idx < 2"
                 :key="'top-' + idx"
-                class="flex items-center xl:flex-col xl:justify-center xl:bg-white w-[250px] h-[270px] rounded-lg"
+                class="flex items-center xl:flex-col xl:justify-center xl:bg-white xl:w-[250px] xl:h-[270px] xl:rounded-lg"
               >
                 <img :src="item.imgSrc" :alt="item.title" class="h-16 w-16 mr-5 object-contain xl:mr-0" />
                 <h3
-                  class="xl:text-[#0F2137] text-center max-w-[150px]"
+                  class="xl:text-[#0F2137] xl:text-center xl:max-w-[150px]"
                   :class="{
                     'max-w-[230px]': idx === 1,
                   }"
@@ -75,11 +75,11 @@
               <div
                 v-if="idx >= 2"
                 :key="'bottom-' + idx"
-                class="flex items-center xl:flex-col xl:justify-center xl:bg-white w-[250px] h-[270px] rounded-lg"
+                class="flex items-center xl:flex-col xl:justify-center xl:bg-white xl:w-[250px] xl:h-[270px] xl:rounded-lg"
               >
                 <img :src="item.imgSrc" :alt="item.title" class="h-16 w-16 mr-5 object-contain xl:mr-0" />
                 <h3
-                  class="xl:text-[#0F2137] text-center max-w-[150px]"
+                  class="xl:text-[#0F2137] xl:text-center xl:max-w-[150px]"
                   :class="{
                     'max-w-[230px]': idx === 3,
                   }"
