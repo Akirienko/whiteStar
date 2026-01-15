@@ -7,10 +7,12 @@ const list = computed(() => [
   t('location.key3'),
   t('location.key4'),
 ])
+
+const { open } = useModal()
 </script>
 
 <template>
-  <section class="py-10 xl:py-24">
+  <section class="pt-10 xl:pt-24 bg-[#FCFCFC]" id="location">
     <div class="main-container">
       <MainTitle
         :title="t('location.title')"
@@ -19,10 +21,10 @@ const list = computed(() => [
         imgSrc="/image/line.svg"
       />
       <p class="text-[#3D3E40] my-2.5 lg:my-5 text-lg font-semibold lg:text-[32px]">{{ t('location.subtitle') }}</p>
-      <p class="text-[#3D3E40] lg:text-2xl mb-14 max-w-[750px]">{{ t('location.description') }}</p>
+      <!-- <p class="text-[#3D3E40] lg:text-2xl mb-14 max-w-[750px]">{{ t('location.description') }}</p> -->
       <List
         :list="list"
-        class="mt-6 mb-10 space-y-4 xl:space-y-0 xl:gap-6 xl:flex xl:flex-wrap xl:justify-between"
+        class="mt-10 mb-10 space-y-4 xl:space-y-0 xl:gap-6 xl:grid xl:grid-cols-2"
         textClass="text-[#3D3E40]"
       />
 
@@ -33,6 +35,7 @@ const list = computed(() => [
           variant="primary"
           :href="'#map'"
           class="w-[280px]"
+          @click="open()"
         >
           <template #customImg>
             <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">

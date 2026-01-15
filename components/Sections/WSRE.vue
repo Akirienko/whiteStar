@@ -24,7 +24,7 @@
 </script>
 
 <template>
-  <section class="py-10 xl:py-24 bg-main-blue">
+  <section class="py-10 xl:py-24 bg-main-blue" id="whyWsre">
     <div class="main-container">
       <div class="lg:flex lg:items-center">
         <div class="xl:mr-2 xl:w-[680px] shrink-0 macbook-13:xl:mr-20">
@@ -52,8 +52,8 @@
           </div>
         </div>
 
-        <div class="mt-10 space-y-8 xl:space-y-0 xl:flex xl:gap-14 xl:py-7">
-          <div class="space-y-8 xl:relative xl:bottom-6">
+        <div class="mt-10 space-y-8 xl:space-y-0 xl:flex xl:gap-10 xl:py-7">
+          <div class="space-y-10 xl:relative xl:bottom-6">
             <template v-for="(item, idx) in infoBlocks">
               <div
                 v-if="idx < 2"

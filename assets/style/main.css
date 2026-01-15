@@ -30,6 +30,10 @@
   font-display: swap;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: 'Inter', sans-serif;
   color: #fff;

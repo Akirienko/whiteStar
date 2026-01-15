@@ -4,7 +4,8 @@
   const form = reactive({
     name: '',
     phone: '',
-    email: ''
+    email: '',
+    companyName: ''
   })
 
   const handleSubmit = () => {
@@ -15,7 +16,7 @@
 </script>
 
 <template>
-  <section class="py-10 xl:py-24 bg-main-blue">
+  <section class="py-10 xl:py-24 bg-main-blue" id="contact-form">
     <div class="main-container">
       <MainTitle
         :title="t('contacts.title')"
@@ -23,7 +24,7 @@
         imgClass="h-3 bottom-0 w-[120px] object-bottom left-0 lg:w-[200px] lg:h-6 lg:-bottom-4 lg:left-2"
         imgSrc="/image/lineShort.svg"
       />
-      <p class="text-base mt-3 lg:text-2xl mb-8 lg:mb-[70px]">{{ t('contacts.subTitle') }}</p>
+      <p class="text-base mt-8 lg:text-2xl mb-8 lg:mb-[70px]">{{ t('contacts.subTitle') }}</p>
 
       <div class="xl:grid xl:grid-cols-2 xl:gap-16">
         <div class="">
@@ -90,6 +91,17 @@
           <form @submit.prevent="handleSubmit" class="space-y-8">
             <div class="relative">
               <input
+                v-model="form.companyName"
+                type="text"
+                id="companyName"
+                class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors placeholder:text-white"
+                :placeholder="t('contacts.formCompanyName')"
+                required
+              />
+            </div>
+
+            <div class="relative">
+              <input
                 v-model="form.name"
                 type="text"
                 id="name"
@@ -121,10 +133,19 @@
               />
             </div>
 
-            <Button
-              :text="t('contacts.formButton')"
-              class="w-full mt-8"
-            />
+            <div class="flex justify-end">
+              <Button
+                :text="t('contacts.formButton')"
+                class="w-72 mt-8"
+              >
+                <template #customImg>
+                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 5.5H10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.5 0.5L10.5 5.5L5.5 10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </template>
+              </Button>
+            </div>
           </form>
         </div>
       </div>

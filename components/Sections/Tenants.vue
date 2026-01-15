@@ -15,7 +15,7 @@ const list = computed(() => [
 </script>
 
 <template>
-  <section class="py-10 xl:py-24 relative">
+  <section class="py-10 xl:py-24 relative bg-[#FCFCFC]" id="forTenants">
     <div class="main-container">
       <img src="/image/tenants/tenantsWave.webp" class="absolute bottom-0 left-0 h-[60%] w-[80%] xl:h-[40%] xl:w-[15%] xl:z-10" alt="wave">
 
@@ -43,22 +43,6 @@ const list = computed(() => [
             textClass="text-[#3D3E40]"
           />
         </div>
-      </div>
-
-      <div class="flex justify-center lg:justify-end mt-14">
-        <Button
-          :text="t('tenants.button')"
-          variant="primary"
-          :href="'#contact'"
-          class="xl:w-[320px]"
-        >
-          <template #customImg>
-            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.5 5.5H10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M5.5 0.5L10.5 5.5L5.5 10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </template>
-        </Button>
       </div>
 
     </div>

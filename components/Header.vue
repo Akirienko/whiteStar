@@ -79,7 +79,7 @@ onMounted(() => {
             {{ locale === 'en' ? 'UA' : 'ENG' }}
           </button>
           <a
-            href="#become-tenant"
+            href="#contact-form"
             class="bg-main-yellow text-[#0B1E3F] px-6 py-3 rounded-lg font-medium hover:bg-[#E5B732] transition-colors flex items-center gap-2"
           >
             {{ $t('header.becomeTenant') }}
@@ -149,7 +149,7 @@ onMounted(() => {
             <!-- Bottom Button -->
             <div class="p-6 pb-10 safe-area-bottom">
               <a
-                href="#become-tenant"
+                href="#contact-form"
                 @click="closeMenu"
                 class="block w-full bg-main-yellow text-main-blue text-center px-6 py-4 rounded-lg font-semibold text-lg hover:bg-[#E5B732] transition-colors"
               >

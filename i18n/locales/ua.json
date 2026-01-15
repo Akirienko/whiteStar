@@ -116,6 +116,7 @@
     "formName": "Ім'я",
     "formPhone": "Номер телефону",
     "formEmail": "Email",
+    "formCompanyName": "Назва Компанії",
     "formButton": "Відправити запит"
   }
 }

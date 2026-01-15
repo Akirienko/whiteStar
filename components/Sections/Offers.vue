@@ -14,7 +14,7 @@
 </script>
 
 <template>
-  <section class="py-10 xl:py-24">
+  <section class="py-10 xl:py-24 bg-[#FCFCFC]">
     <div class="main-container">
       <div class="lg:flex lg:items-center">
         <div class="hidden lg:block w-[580px] mr-20 xl:mr-40">

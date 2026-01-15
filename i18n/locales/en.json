@@ -114,7 +114,8 @@
     "formName": "Name",
     "formPhone": "Phone number",
     "formEmail": "Email",
-    "formButton": "Send Request"
+    "formCompanyName": "Company Name",
+    "formButton": "Schedule a Call"
   }
 
 }

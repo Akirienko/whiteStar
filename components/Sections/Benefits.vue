@@ -13,7 +13,7 @@ const cases = computed(() => [
 </script>
 
 <template>
-  <section class="py-10 xl:py-24">
+  <section class="py-10 xl:py-24 bg-[#FCFCFC]">
     <div class="main-container">
       <div class="flex justify-center mb-10 lg:mb-16">
         <MainTitle
@@ -27,7 +27,7 @@ const cases = computed(() => [
         <div
           v-for="(item, idx) in cases"
           :key="idx"
-          class="bg-main-blue text-white p-6 rounded-[10px] mb-6 flex items-center justify-center xl:h-60"
+          class="bg-main-blue text-white p-6 rounded-[10px] mb-6 flex items-center justify-center xl:h-60 xl:mb-0"
         >
           <p
             class="font-bold text-main-yellow text-center xl:text-[34px] max-w-[260px]"
@@ -42,7 +42,7 @@ const cases = computed(() => [
         <Button
           :text="t('btn-become')"
           variant="primary"
-          :href="'#contact'"
+          :href="'#contact-form'"
           class="mb-4 w-full max-w-[430px]"
         >
           <template #customImg>

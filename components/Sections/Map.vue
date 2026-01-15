@@ -5,18 +5,17 @@
 </script>
 
 <template>
-  <section class="py-10 xl:py-24">
+  <section class="py-10 xl:pb-24 bg-[#FCFCFC]">
     <div class="main-container">
       <div class="relative">
-        <button @click="open()" class="hidden lg:block bucha-btn text-[#FE9C00] font-semibold bg-white absolute left-[38.6%] top-[17%] h-10 w-[74px] rounded shadow-lg xl:h-12 xl:w-[93px]  macbook-13:text-xl macbook-13:xl:h-14 macbook-13:w-[99px]">
-          {{ t('Bucha') }}
+        <button @click="open()" class="hidden lg:block px-1 bucha-btn bg-white absolute left-[38.6%] top-[17%] h-10 w-[74px] rounded shadow-lg xl:h-12 xl:w-[93px]  macbook-13:text-xl macbook-13:xl:h-12 macbook-13:w-[99px]">
+          <img src="/image/bucha.webp" class="object-contain object-center" alt="bucha">
         </button>
         <picture>
           <source media="(max-width: 768px)" srcset="/image/mapUAMobile.webp" type="image/webp">
           <img
-            src="/image/mapUA.webp"
+            src="/image/mapUA.svg"
             alt="map"
-            loading="lazy"
             class="w-full h-auto"
           >
         </picture>

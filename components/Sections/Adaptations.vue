@@ -33,7 +33,7 @@ const list = computed(() => [
         <Button
           :text="t('adaptations.button')"
           variant="primary"
-          :href="'#contact'"
+          :href="'#contact-form'"
           class="xl:w-[450px]"
         >
           <template #customImg>
