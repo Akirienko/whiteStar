@@ -1,4 +1,6 @@
 <script setup>
+  import emailjs from '@emailjs/browser'
+
   const { t } = useI18n()
 
   const form = reactive({
@@ -7,11 +9,50 @@
     email: '',
     companyName: ''
   })
+  const isSubmitting = ref(false)
+  const submitStatus = ref(null)
 
-  const handleSubmit = () => {
-    // Тут буде логіка відправки форми
-    console.log('Form submitted:', form)
-    // Можна додати відправку на сервер або показати модалку
+  const handlePhoneInput = (event) => {
+    const value = event.target.value
+    event.target.value = value.replace(/[^0-9+]/g, '')
+    form.phone = event.target.value
+  }
+
+  const handleSubmit = async () => {
+    isSubmitting.value = true
+    submitStatus.value = null
+
+    try {
+      await emailjs.send(
+        'service_gidqttw',
+        'template_mbn9psp',
+        {
+          companyName: form.companyName,
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+        },
+        'IDbX4XDhzCp9ykfXP'
+      )
+
+      submitStatus.value = 'success'
+      Object.keys(form).forEach(key => form[key] = '')
+
+      setTimeout(() => {
+        submitStatus.value = null
+      }, 3000)
+
+    } catch (error) {
+      console.error('Email send failed:', error)
+      submitStatus.value = 'error'
+
+      setTimeout(() => {
+        submitStatus.value = null
+      }, 3000)
+
+    } finally {
+      isSubmitting.value = false
+    }
   }
 </script>
 
@@ -88,12 +129,14 @@
         </div>
 
         <div class="mt-10 xl:mt-0">
-          <form @submit.prevent="handleSubmit" class="space-y-8">
+          <form @submit.prevent="handleSubmit" class="space-y-8" autocomplete="off">
             <div class="relative">
               <input
                 v-model="form.companyName"
                 type="text"
                 id="companyName"
+                name="companyName"
+                autocomplete="off"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors placeholder:text-white"
                 :placeholder="t('contacts.formCompanyName')"
                 required
@@ -105,6 +148,8 @@
                 v-model="form.name"
                 type="text"
                 id="name"
+                name="name"
+                autocomplete="off"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors placeholder:text-white"
                 :placeholder="t('contacts.formName')"
                 required
@@ -116,6 +161,9 @@
                 v-model="form.phone"
                 type="tel"
                 id="phone"
+                name="phone"
+                autocomplete="off"
+                @input="handlePhoneInput"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors placeholder:text-white"
                 :placeholder="t('contacts.formPhone')"
                 required
@@ -127,24 +175,33 @@
                 v-model="form.email"
                 type="email"
                 id="email"
+                name="email"
+                autocomplete="off"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors placeholder:text-white"
                 :placeholder="t('contacts.formEmail')"
                 required
               />
             </div>
 
-            <div class="flex justify-end">
-              <Button
-                :text="t('contacts.formButton')"
-                class="w-72 mt-8"
+            <div class="flex flex-col items-end gap-4">
+              <button
+                type="submit"
+                :disabled="isSubmitting"
+                class="px-6 py-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 whitespace-nowrap bg-main-yellow text-[#002160] hover:bg-[#E5B732] disabled:opacity-50 disabled:cursor-not-allowed w-72"
               >
-                <template #customImg>
-                  <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.5 5.5H10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M5.5 0.5L10.5 5.5L5.5 10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </template>
-              </Button>
+                {{ isSubmitting ? t('contacts.sending') : t('contacts.formButton') }}
+                <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.5 5.5H10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M5.5 0.5L10.5 5.5L5.5 10.5" stroke="#002160" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+
+              <div v-if="submitStatus === 'success'" class="text-green-400">
+                {{ t('contacts.successMessage') }}
+              </div>
+              <div v-if="submitStatus === 'error'" class="text-red-400">
+                {{ t('contacts.errorMessage') }}
+              </div>
             </div>
           </form>
         </div>

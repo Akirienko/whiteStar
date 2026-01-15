@@ -117,6 +117,9 @@
     "formPhone": "Номер телефону",
     "formEmail": "Email",
     "formCompanyName": "Назва Компанії",
-    "formButton": "Відправити запит"
+    "formButton": "Відправити запит",
+    "sending": "Відправка...",
+    "successMessage": "Повідомлення відправленно!",
+    "errorMessage": "ПОМИЛКА, Будь Ласка спробуйте ще раз!"
   }
 }

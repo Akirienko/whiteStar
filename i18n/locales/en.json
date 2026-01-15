@@ -115,7 +115,11 @@
     "formPhone": "Phone number",
     "formEmail": "Email",
     "formCompanyName": "Company Name",
-    "formButton": "Schedule a Call"
+    "formButton": "Schedule a Call",
+    "sending": "Sending...",
+    "successMessage": "Success message sended",
+    "errorMessage": "ERROR, Please try again"
+
   }
 
 }
