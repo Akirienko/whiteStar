@@ -1,5 +1,6 @@
 
 <script setup>
+
   const { isOpen, close } = useModal()
 
 </script>
@@ -17,7 +18,13 @@
   <Tenants />
   <WSRE />
   <Offers />
-  <Contacts />
+
+  <div class="bg-main-blue">
+    <Contacts />
+    <Footer />
+  </div>
+
+
 
   <Modal v-if="isOpen" @close="close">
     <img src="/image/mapUAMobile.webp" alt="map">
