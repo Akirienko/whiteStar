@@ -14,9 +14,10 @@
     <Specifications />
     <Adaptations />
     <Warehouse />
+    <WSRE />
+
   </div>
-  <Tenants />
-  <WSRE />
+  <!-- <Tenants /> -->
   <Offers />
 
   <div class="bg-main-blue">

@@ -68,7 +68,7 @@
     "button": "Завантажити плани поверхів"
   },
   "adaptations": {
-    "title": "Доступні технічні адаптації",
+    "title": "Доступні технічні адаптації:",
     "list1": "Опції Build-to-Own",
     "list2": "Посилення надбудови (дах)",
     "list3": "Рішення Build-to-Suit",
@@ -98,12 +98,12 @@
     "button": "Детальніше про WSRE"
   },
   "offers": {
-    "title": "Our Offers",
-    "itemList1": "High Quality Standarts",
-    "itemList2": "Fast Delivery Timelines",
-    "itemList3": "Proven Reliability & Execution ",
-    "itemList4": "Full Transparency",
-    "itemList5": "Long-Term Owner Commitment & Guarantee"
+    "title": "Наші пропозиції",
+    "itemList1": "Високі стандарти якості",
+    "itemList2": "Швидкі терміни реалізації",
+    "itemList3": "Доведена надійність і виконання",
+    "itemList4": "Повна прозорість",
+    "itemList5": "Довгострокова відповідальність та гарантія власника"
   },
   "Bucha": "Буча",
   "contacts": {

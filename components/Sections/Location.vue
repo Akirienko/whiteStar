@@ -28,7 +28,7 @@ const { open } = useModal()
         textClass="text-[#3D3E40]"
       />
 
-      <div class="flex justify-end">
+      <div class="hidden md:flex justify-end">
 
         <Button
           :text="t('location.button')"

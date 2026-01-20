@@ -18,7 +18,24 @@
     form.phone = event.target.value
   }
 
+  const isFormValid = computed(() => {
+    return (
+      form.name.trim() !== '' &&
+      form.phone.trim() !== '' &&
+      form.email.trim() !== ''
+    )
+  })
+
   const handleSubmit = async () => {
+    // Перевірка на пусті поля (тільки пробіли)
+    if (!isFormValid.value) {
+      submitStatus.value = 'error'
+      setTimeout(() => {
+        submitStatus.value = null
+      }, 3000)
+      return
+    }
+
     isSubmitting.value = true
     submitStatus.value = null
 
@@ -27,10 +44,10 @@
         'service_gidqttw',
         'template_mbn9psp',
         {
-          companyName: form.companyName,
-          name: form.name,
-          phone: form.phone,
-          email: form.email,
+          companyName: form.companyName.trim(),
+          name: form.name.trim(),
+          phone: form.phone.trim(),
+          email: form.email.trim(),
         },
         'IDbX4XDhzCp9ykfXP'
       )
@@ -144,7 +161,6 @@
                 name="companyName"
                 autocomplete="off"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors"
-                required
               />
             </div>
 
@@ -209,7 +225,7 @@
             <div class="flex flex-col items-end gap-4">
               <button
                 type="submit"
-                :disabled="isSubmitting"
+                :disabled="isSubmitting || !isFormValid"
                 class="px-6 py-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2 whitespace-nowrap bg-main-yellow text-[#002160] hover:bg-[#E5B732] disabled:opacity-50 disabled:cursor-not-allowed w-72"
               >
                 {{ isSubmitting ? t('contacts.sending') : t('contacts.formButton') }}
