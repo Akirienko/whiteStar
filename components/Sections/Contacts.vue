@@ -12,6 +12,23 @@
   const isSubmitting = ref(false)
   const submitStatus = ref(null)
 
+  // Для відстеження автозаповнення на Android
+  const checkAutofill = () => {
+    const fields = ['companyName', 'name', 'phone', 'email']
+    fields.forEach(fieldName => {
+      const input = document.getElementById(fieldName)
+      if (input && input.value && !form[fieldName]) {
+        form[fieldName] = input.value
+      }
+    })
+  }
+
+  onMounted(() => {
+    // Перевірка автозаповнення з затримкою
+    setTimeout(checkAutofill, 100)
+    setTimeout(checkAutofill, 500)
+  })
+
   const handlePhoneInput = (event) => {
     const value = event.target.value
     event.target.value = value.replace(/[^0-9+]/g, '')
@@ -160,6 +177,8 @@
                 id="companyName"
                 name="companyName"
                 autocomplete="off"
+                @change="checkAutofill"
+                @animationstart="checkAutofill"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors"
               />
             </div>
@@ -178,6 +197,8 @@
                 id="name"
                 name="name"
                 autocomplete="off"
+                @change="checkAutofill"
+                @animationstart="checkAutofill"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors"
                 required
               />
@@ -198,6 +219,8 @@
                 name="phone"
                 autocomplete="off"
                 @input="handlePhoneInput"
+                @change="checkAutofill"
+                @animationstart="checkAutofill"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors"
                 required
               />
@@ -217,6 +240,8 @@
                 id="email"
                 name="email"
                 autocomplete="off"
+                @change="checkAutofill"
+                @animationstart="checkAutofill"
                 class="w-full bg-transparent border-0 border-b border-white/50 text-white text-base lg:text-xl py-3 px-0 focus:outline-none focus:border-white transition-colors"
                 required
               />
