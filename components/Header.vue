@@ -8,7 +8,7 @@ const menuItems = [
   { key: 'sitePlan', href: '#sitePlan' },
   { key: 'specifications', href: '#specifications' },
   { key: 'whyWSRE', href: '#whyWsre' },
-  { key: 'forTenants', href: '#forTenants' },
+  // { key: 'forTenants', href: '#forTenants' },
 ]
 
 const toggleMenu = () => {

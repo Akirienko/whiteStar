@@ -37,6 +37,31 @@ const { t } = useI18n()
           <p class="text-sm lg:text-lg">{{ t('warehouse.type2Desk2') }}</p>
         </div>
       </div>
+      <div class="hidden lg:flex items-center">
+        <div class="max-w-[1023px] mr-10">
+          <img src="/image/wrehouse.webp" alt="werehouse">
+        </div>
+        <div class="">
+          <div class="border border-[#ECECEC]/50 p-7 text-center w-[240px] flex flex-col gap-5">
+            <div class="">
+              <p class="text-2xl text-[#ECECEC] opacity-50 mb-4">Type 2</p>
+              <p class="text-3xl text-white font-semibold">41 ha</p>
+            </div>
+            <div class="">
+              <p class="text-2xl text-[#ECECEC] opacity-50 mb-4">Type 2</p>
+              <p class="text-3xl text-white font-semibold">20 950 м²  </p>
+            </div>
+            <div class="">
+              <p class="text-2xl text-[#ECECEC] opacity-50 mb-4">Type 2</p>
+              <p class="text-3xl text-white font-semibold">15 720 м² </p>
+            </div>
+            <div class="">
+              <p class="text-2xl text-[#ECECEC] opacity-50 mb-4">Type 2</p>
+              <p class="text-3xl text-white font-semibold">225 000 м² </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- <div class="flex justify-center lg:justify-end mt-14">
         <Button
           :text="t('warehouse.button')"
